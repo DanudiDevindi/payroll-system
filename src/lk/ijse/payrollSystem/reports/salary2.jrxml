@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2018-06-11T21:17:05 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="salary2" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2728cfc1-b26e-4847-a3bc-fe88d0b04ee5">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="payrollSystem Adapter "/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[select * from salary]]>
+	</queryString>
+	<field name="salId" class="java.lang.String"/>
+	<field name="eId" class="java.lang.String"/>
+	<field name="ename" class="java.lang.String"/>
+	<field name="level" class="java.lang.String"/>
+	<field name="salaryType" class="java.lang.String"/>
+	<field name="amount" class="java.math.BigDecimal"/>
+	<field name="date" class="java.sql.Date"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="180" y="20" width="181" height="30" uuid="da3cdcd5-3395-4351-addc-3be944af3a3d"/>
+				<textElement>
+					<font size="22"/>
+				</textElement>
+				<text><![CDATA[Basic Salary]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="81" height="30" uuid="61fc9251-f219-407e-b8a0-01b17304d91f"/>
+				<text><![CDATA[salId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="0" width="79" height="30" uuid="f91b36ee-a558-4bff-af68-462276f765a7"/>
+				<text><![CDATA[eId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="0" width="79" height="30" uuid="a7d0439a-f4ba-46b3-8e20-3cffb3d2064d"/>
+				<text><![CDATA[ename]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="239" y="0" width="79" height="30" uuid="b668cbfc-bde8-4e2c-b8f7-2cec9c144f75"/>
+				<text><![CDATA[level]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="318" y="0" width="79" height="30" uuid="90e5aa87-7600-44be-8298-35b49104c956"/>
+				<text><![CDATA[salaryType]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="397" y="0" width="79" height="30" uuid="07f09110-7852-4deb-b400-8e6cb22b69d4"/>
+				<text><![CDATA[amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="476" y="0" width="79" height="30" uuid="971c9aa7-88a1-4a6b-848c-e479de4d2b8e"/>
+				<text><![CDATA[date]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="361" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="61" width="81" height="30" uuid="38260ae5-8538-4b00-abce-3062b3248d09"/>
+				<textFieldExpression><![CDATA[$F{salId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="81" y="61" width="79" height="30" uuid="c68be043-331c-483f-bd68-ff1726a82f5d"/>
+				<textFieldExpression><![CDATA[$F{eId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="61" width="79" height="30" uuid="7aff5e83-1a86-4df6-bd96-4043fdff10f4"/>
+				<textFieldExpression><![CDATA[$F{ename}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="239" y="61" width="79" height="30" uuid="874149a3-c1fa-4b0b-816c-f848261589f0"/>
+				<textFieldExpression><![CDATA[$F{level}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="318" y="61" width="79" height="30" uuid="143cc3d7-ad64-4ade-a2ab-65209831ebb0"/>
+				<textFieldExpression><![CDATA[$F{salaryType}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="397" y="61" width="79" height="30" uuid="129a2d0e-4f16-4f89-a412-2b327de73604"/>
+				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="476" y="61" width="79" height="30" uuid="61a1772a-ff1a-4100-a25d-99023d07d576"/>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<stackedBar3DChart>
+				<chart evaluationTime="Report">
+					<reportElement x="20" y="130" width="450" height="200" uuid="999f3c71-ed95-4acd-9cc8-0817e5570448"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA["SERIES 1"]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{ename}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{amount}]]></valueExpression>
+						<labelExpression><![CDATA[$F{ename}]]></labelExpression>
+					</categorySeries>
+				</categoryDataset>
+				<bar3DPlot>
+					<plot/>
+					<itemLabel/>
+					<categoryAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</valueAxisFormat>
+				</bar3DPlot>
+			</stackedBar3DChart>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

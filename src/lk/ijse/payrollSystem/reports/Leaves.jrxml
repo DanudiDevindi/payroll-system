@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2018-06-09T17:49:18 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Leaves" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4dbebcc3-a59c-42bf-b417-45b107a602fa">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="payrollSystem Adapter "/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[select * from leaves]]>
+	</queryString>
+	<field name="levId" class="java.lang.String"/>
+	<field name="EId" class="java.lang.String"/>
+	<field name="Empname" class="java.lang.String"/>
+	<field name="level" class="java.lang.String"/>
+	<field name="type" class="java.lang.String"/>
+	<field name="month" class="java.lang.String"/>
+	<field name="totalLeave" class="java.lang.String"/>
+	<field name="datesOfLeaves" class="java.lang.String"/>
+	<field name="balanceLeave" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="190" y="24" width="170" height="30" uuid="3baac757-b2cd-41ec-b9cb-48357e41b0a5"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Leaves Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="50" height="30" uuid="fcf6565c-43df-4e2d-9eef-0978e33db0fa"/>
+				<text><![CDATA[levId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="67" y="0" width="43" height="30" uuid="08493ff2-ebd2-48ef-a758-11d6cd84daae"/>
+				<text><![CDATA[EId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="128" y="0" width="52" height="30" uuid="4bdbc7db-bafa-4ae1-b8af-fa310ced007d"/>
+				<text><![CDATA[Empname]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="189" y="0" width="50" height="30" uuid="9a0d638e-b7db-45e2-b758-2c22a8e90b94"/>
+				<text><![CDATA[level]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="0" width="50" height="30" uuid="ac198670-da62-4c3e-a6a4-2305ff06b6d7"/>
+				<text><![CDATA[type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="311" y="0" width="49" height="30" uuid="1ab2bbf1-f94d-49d2-b203-466338f136b8"/>
+				<text><![CDATA[month]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="372" y="0" width="48" height="30" uuid="e0e55795-d5af-45a8-be6a-49453a96e8bb"/>
+				<text><![CDATA[totalLeave]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="433" y="0" width="47" height="30" uuid="4485b02b-3c9b-4431-9c81-0f017ed62b41"/>
+				<text><![CDATA[datesOfLeaves]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="494" y="0" width="61" height="30" uuid="968df6e0-0b79-4743-816c-ae49d49d5569"/>
+				<text><![CDATA[balanceLeave]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="81" width="50" height="30" uuid="c07c8957-ab2c-4103-bcb9-73f836601518"/>
+				<textFieldExpression><![CDATA[$F{levId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="67" y="81" width="43" height="30" uuid="8ab0b780-f23f-48cf-acfd-899fe3185818"/>
+				<textFieldExpression><![CDATA[$F{EId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="128" y="81" width="42" height="30" uuid="52d73cbc-822c-4606-bafd-30a73af7500f"/>
+				<textFieldExpression><![CDATA[$F{Empname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="189" y="81" width="50" height="30" uuid="74fe7e74-7d86-4db5-a6d2-fe0a5a2d186e"/>
+				<textFieldExpression><![CDATA[$F{level}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="250" y="81" width="40" height="30" uuid="22a9f2b3-4589-4932-aac8-802768c0c212"/>
+				<textFieldExpression><![CDATA[$F{type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="311" y="81" width="49" height="30" uuid="d060503f-04a2-40b3-82a9-788dc96db046"/>
+				<textFieldExpression><![CDATA[$F{month}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="372" y="81" width="48" height="30" uuid="15cb03a1-56b7-47f8-8fbe-0960ce0e51d4"/>
+				<textFieldExpression><![CDATA[$F{totalLeave}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="433" y="81" width="47" height="30" uuid="007abbca-dd9f-4b1b-9440-47de2f661f52"/>
+				<textFieldExpression><![CDATA[$F{datesOfLeaves}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="494" y="81" width="61" height="30" uuid="1ef70d6e-bf4e-4e1d-94da-94d125b398a4"/>
+				<textFieldExpression><![CDATA[$F{balanceLeave}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

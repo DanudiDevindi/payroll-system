@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2018-06-10T23:41:18 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Loans" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c89d3b84-7ca9-4e71-98c9-b70c347040ca">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="payrollSystem Adapter "/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[select * from loans]]>
+	</queryString>
+	<field name="lId" class="java.lang.String"/>
+	<field name="eId" class="java.lang.String"/>
+	<field name="eName" class="java.lang.String"/>
+	<field name="level" class="java.lang.String"/>
+	<field name="loanAmount" class="java.math.BigDecimal"/>
+	<field name="date" class="java.sql.Date"/>
+	<field name="due" class="java.lang.String"/>
+	<field name="interest" class="java.lang.Double"/>
+	<field name="total" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="200" y="40" width="190" height="30" uuid="b67d3603-3dc3-40be-9cbc-9f75a2c1cf55"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Loans Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="-10" y="0" width="40" height="30" uuid="c4c2794f-79b6-4673-b023-94c22e337746"/>
+				<text><![CDATA[lId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="0" width="43" height="30" uuid="2e73b188-0da2-4e7f-9c0c-c3e12f30f29d"/>
+				<text><![CDATA[eId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="128" y="0" width="42" height="30" uuid="2344701e-bfa2-4041-8795-17f4f5c1de0b"/>
+				<text><![CDATA[eName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="189" y="0" width="31" height="30" uuid="ae58bd5f-3fef-4ce9-82cd-406162973969"/>
+				<text><![CDATA[level]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="0" width="61" height="30" uuid="36f3a1e3-5780-46a1-b716-7db7542b6dcc"/>
+				<text><![CDATA[loanAmount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="311" y="0" width="49" height="30" uuid="8821b19a-0454-4879-bb5a-b58f8642fcbb"/>
+				<text><![CDATA[date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="372" y="0" width="38" height="30" uuid="9eb8135b-83c3-4afc-b160-96411a96cd86"/>
+				<text><![CDATA[due]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="433" y="0" width="61" height="30" uuid="6bec5576-3062-4747-a8bf-d52bc75f3595"/>
+				<text><![CDATA[interest]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="518" y="0" width="44" height="30" uuid="136d6710-20fc-4b68-bc05-268771cd1511"/>
+				<text><![CDATA[total]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="319" splitType="Stretch">
+			<textField>
+				<reportElement x="-20" y="80" width="50" height="30" uuid="578448c1-f45c-4d05-92cf-bb69913e8186"/>
+				<textFieldExpression><![CDATA[$F{lId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="50" y="80" width="43" height="30" uuid="0e8dcb2e-a285-4b01-acd9-5794ca10b415"/>
+				<textFieldExpression><![CDATA[$F{eId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="128" y="80" width="42" height="30" uuid="83b43ce8-4a59-4105-8a4e-130ef34fde0d"/>
+				<textFieldExpression><![CDATA[$F{eName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="189" y="80" width="41" height="30" uuid="3a49c8cf-4b18-459b-a0b3-50bf95738b7f"/>
+				<textFieldExpression><![CDATA[$F{level}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="250" y="80" width="61" height="30" uuid="d8f283ad-78b0-482c-9156-5ff91d701103"/>
+				<textFieldExpression><![CDATA[$F{loanAmount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="318" y="80" width="61" height="30" uuid="dadfdce7-765c-41e4-8234-bbbb1567ece5"/>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="379" y="80" width="41" height="30" uuid="313dcaa3-9b7c-4236-a47a-9107c2d14c21"/>
+				<textFieldExpression><![CDATA[$F{due}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="440" y="80" width="61" height="30" uuid="276e6557-fded-4228-82b2-b4eeb7eb481b"/>
+				<textFieldExpression><![CDATA[$F{interest}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="520" y="80" width="40" height="30" uuid="a707e805-1aac-402e-b2c2-561a9125bb4f"/>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+			<barChart>
+				<chart evaluationTime="Report">
+					<reportElement x="128" y="119" width="200" height="200" uuid="67f3cea2-02c1-41ac-95b8-29f960dbd0f5"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA["SERIES 1"]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{eName}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{loanAmount}]]></valueExpression>
+						<labelExpression><![CDATA[$F{eName}]]></labelExpression>
+					</categorySeries>
+				</categoryDataset>
+				<barPlot>
+					<plot/>
+					<itemLabel/>
+					<categoryAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</valueAxisFormat>
+				</barPlot>
+			</barChart>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="210" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

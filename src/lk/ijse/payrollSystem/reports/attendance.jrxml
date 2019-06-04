@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2018-06-01T11:45:29 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="attendance" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="23d76ab0-5e2e-4134-9be6-36db84fed3a9">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="payrollSystem Adapter "/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[select * from attendance]]>
+	</queryString>
+	<field name="aId" class="java.lang.String"/>
+	<field name="eId" class="java.lang.String"/>
+	<field name="inTime" class="java.lang.String"/>
+	<field name="outTime" class="java.lang.String"/>
+	<field name="date" class="java.sql.Date"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="143" y="37" width="257" height="30" uuid="4553ff7b-5a25-4b79-8f33-ccf3e8271709"/>
+				<textElement>
+					<font size="22"/>
+				</textElement>
+				<text><![CDATA[Attendance Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="111" height="30" uuid="a0a4e82b-fd77-43d1-adad-d765df3e69b1"/>
+				<text><![CDATA[aId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="111" y="0" width="111" height="30" uuid="2c37458a-2525-4c57-8d92-86d3c312804b"/>
+				<text><![CDATA[eId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="222" y="0" width="111" height="30" uuid="e33cc438-9025-4a6f-8120-be34649917e2"/>
+				<text><![CDATA[inTime]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="0" width="111" height="30" uuid="e1e2fa22-b2ad-42ef-a05c-e4ff62fcc741"/>
+				<text><![CDATA[outTime]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="0" width="111" height="30" uuid="4ac4d37d-2742-448e-a2ac-b2d4cb637ac6"/>
+				<text><![CDATA[date]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="52" width="111" height="30" uuid="ebd75cf8-7944-48ea-8360-aca2aad55920"/>
+				<textFieldExpression><![CDATA[$F{aId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="52" width="111" height="30" uuid="aa544535-7614-4204-a9a9-702285c4b071"/>
+				<textFieldExpression><![CDATA[$F{eId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="52" width="111" height="30" uuid="ccf417f2-887e-420a-8bea-6545f031c89e"/>
+				<textFieldExpression><![CDATA[$F{inTime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="333" y="52" width="111" height="30" uuid="c5bb70a9-c39f-4640-95ba-f748679db065"/>
+				<textFieldExpression><![CDATA[$F{outTime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="444" y="52" width="111" height="30" uuid="e00bfed6-b95a-4a98-af9c-93408c88ca12"/>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

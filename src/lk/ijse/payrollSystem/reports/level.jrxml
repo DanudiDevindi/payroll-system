@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2018-06-15T16:42:00 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="level" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fdec13f7-ee0a-41da-b3a8-71904ab76c6e">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="payrollSystem Adapter "/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[select * from level]]>
+	</queryString>
+	<field name="leId" class="java.lang.String"/>
+	<field name="lName" class="java.lang.String"/>
+	<field name="basicSalary" class="java.math.BigDecimal"/>
+	<field name="EPFAmount" class="java.math.BigDecimal"/>
+	<field name="totalLeaves" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="160" y="40" width="199" height="30" uuid="d5dff48f-3750-42da-873a-34014c8e9044"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Levels Details]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="111" height="30" uuid="60b02e5e-658b-43cc-a7d1-56d788d06995"/>
+				<text><![CDATA[leId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="111" y="0" width="111" height="30" uuid="28d2efdc-8370-4272-a43c-70cd394d7f7a"/>
+				<text><![CDATA[lName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="222" y="0" width="111" height="30" uuid="9da0f683-b783-4ea3-8841-32f641f30435"/>
+				<text><![CDATA[basicSalary]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="0" width="111" height="30" uuid="46bb7728-1dc4-4f36-aa6b-8808266423be"/>
+				<text><![CDATA[EPFAmount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="0" width="111" height="30" uuid="4498f98e-fb54-49f0-9f16-838de8027242"/>
+				<text><![CDATA[totalLeaves]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="65" width="111" height="30" uuid="92e4911c-1839-4be1-83d9-1f8635b6a9c0"/>
+				<textFieldExpression><![CDATA[$F{leId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="65" width="111" height="30" uuid="17716827-2818-4962-927d-1f4b9ea6e537"/>
+				<textFieldExpression><![CDATA[$F{lName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="65" width="111" height="30" uuid="e65976cb-82aa-4298-8fa8-b4cf20116d8a"/>
+				<textFieldExpression><![CDATA[$F{basicSalary}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="333" y="65" width="111" height="30" uuid="b9abccf5-ffd0-4c7b-a7a4-5eb1d44dd1fb"/>
+				<textFieldExpression><![CDATA[$F{EPFAmount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="444" y="65" width="111" height="30" uuid="fb3c1fe1-4174-4d06-94bf-7fa9aca4c76b"/>
+				<textFieldExpression><![CDATA[$F{totalLeaves}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

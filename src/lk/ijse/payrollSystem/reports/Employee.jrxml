@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2018-06-01T11:10:26 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Employee" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="31836390-f4e8-4a47-970b-52e01a41ffdc">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="payrollSystem Adapter "/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[select * from employee]]>
+	</queryString>
+	<field name="eId" class="java.lang.String"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="address" class="java.lang.String"/>
+	<field name="gender" class="java.lang.String"/>
+	<field name="dob" class="java.sql.Date"/>
+	<field name="TelNo" class="java.lang.String"/>
+	<field name="dateOfJoining" class="java.sql.Date"/>
+	<field name="nic" class="java.lang.String"/>
+	<field name="eMail" class="java.lang.String"/>
+	<field name="leId" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="180" y="20" width="220" height="30" uuid="2826b35f-fe93-4447-a61e-b81502d01f2f"/>
+				<textElement>
+					<font size="22"/>
+				</textElement>
+				<text><![CDATA[Employee Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="75" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="-11" y="0" width="31" height="30" uuid="5e450c27-341f-40c9-9d90-6f3da56ffbd9"/>
+				<text><![CDATA[eId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="0" width="30" height="30" uuid="cba02949-e2be-4efa-9c26-b718d14f05b2"/>
+				<text><![CDATA[name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="0" width="40" height="30" uuid="e2a43229-209f-4fae-88cf-28b5fb9db74f"/>
+				<text><![CDATA[gender]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="210" y="0" width="55" height="30" uuid="3255e270-b20b-49b2-a1a1-805a00dc9d3a"/>
+				<text><![CDATA[dob]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="0" width="55" height="30" uuid="0146513d-3e81-40c2-8359-1a51c4daa4f5"/>
+				<text><![CDATA[TelNo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="335" y="0" width="45" height="30" uuid="23f77070-6173-4835-8610-ad467a8ef58e"/>
+				<text><![CDATA[dateOfJoining]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="0" width="30" height="30" uuid="5691779f-81c8-4310-a2de-70fd285ef311"/>
+				<text><![CDATA[nic]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="445" y="0" width="55" height="30" uuid="8754ab3a-6122-40fc-8766-5e3b81f54506"/>
+				<text><![CDATA[eMail]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="520" y="0" width="55" height="30" uuid="d51f9247-72e2-4a4d-a951-1ec4a64ddfe8"/>
+				<text><![CDATA[leId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="0" width="40" height="30" uuid="f03119d5-390a-4bbe-b853-8e980631a6b7"/>
+				<text><![CDATA[address]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="-16" y="30" width="30" height="30" uuid="c0159fc0-a8b4-4685-ab77-84f7da1f30c1"/>
+				<textFieldExpression><![CDATA[$F{eId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="30" width="30" height="30" uuid="379119a3-6715-4351-a598-ad88d5c92e07"/>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="30" width="35" height="30" uuid="8e373d0d-6023-40cd-8b9c-1656eee3348d"/>
+				<textFieldExpression><![CDATA[$F{address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="30" width="40" height="30" uuid="20a1cf3f-d947-47c9-8934-c6b6a10cd431"/>
+				<textFieldExpression><![CDATA[$F{gender}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="30" width="55" height="30" uuid="39882bdb-6851-4082-8c9a-8c1beb591653"/>
+				<textFieldExpression><![CDATA[$F{dob}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="30" width="55" height="30" uuid="55a9f012-e640-49f4-8963-f0fdcf88da77"/>
+				<textFieldExpression><![CDATA[$F{TelNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="340" y="30" width="55" height="30" uuid="a867dd0d-627c-4531-9762-49accb8f81c1"/>
+				<textFieldExpression><![CDATA[$F{dateOfJoining}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="30" width="55" height="30" uuid="b5d7f278-42a5-4100-9c5d-3b082a7e3a37"/>
+				<textFieldExpression><![CDATA[$F{nic}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="30" width="55" height="30" uuid="0d267e99-e4c4-4234-bb8a-0a86349ea174"/>
+				<textFieldExpression><![CDATA[$F{eMail}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="520" y="30" width="55" height="30" uuid="62488773-adaf-4d1e-bf37-4333f8602472"/>
+				<textFieldExpression><![CDATA[$F{leId}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2018-06-01T11:23:49 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Loans1" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="81da1d60-4174-4efe-bb46-8b5f8dd4e68e">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="payrollSystem Adapter "/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[select * from loans]]>
+	</queryString>
+	<field name="lId" class="java.lang.String"/>
+	<field name="eId" class="java.lang.String"/>
+	<field name="eName" class="java.lang.String"/>
+	<field name="level" class="java.lang.String"/>
+	<field name="loanAmount" class="java.math.BigDecimal"/>
+	<field name="date" class="java.sql.Date"/>
+	<field name="due" class="java.lang.String"/>
+	<field name="interest" class="java.lang.Double"/>
+	<field name="total" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="169" y="10" width="203" height="30" uuid="26a99506-5d28-4007-93e2-ee453e806b32"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Loans Details]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="67" height="30" uuid="6543bd3d-af4b-4416-a37c-4b8586b89ea5"/>
+				<text><![CDATA[lId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="67" y="0" width="61" height="30" uuid="89c2b49c-a6db-4cae-8de0-61c97beb6f9d"/>
+				<text><![CDATA[eId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="128" y="0" width="61" height="30" uuid="9cd4ee08-c4c7-4fce-b0f0-b75219f6ce5f"/>
+				<text><![CDATA[eName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="189" y="0" width="61" height="30" uuid="a89bf670-3220-4d6b-a846-4046e6bb6c3b"/>
+				<text><![CDATA[level]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="0" width="61" height="30" uuid="8b0e5e62-6080-4b06-9412-99f4797a427a"/>
+				<text><![CDATA[loanAmount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="311" y="0" width="61" height="30" uuid="b5b5984d-53c2-451a-a5e0-1606dc8538d3"/>
+				<text><![CDATA[date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="372" y="0" width="61" height="30" uuid="ed5cb877-4902-4dcc-9243-1e47b174563b"/>
+				<text><![CDATA[due]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="433" y="0" width="61" height="30" uuid="04cded3d-ad77-4421-80b7-39a4786d4f79"/>
+				<text><![CDATA[interest]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="494" y="0" width="61" height="30" uuid="1ccf6c27-6fc4-4e38-8bca-851448ee2b9d"/>
+				<text><![CDATA[total]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="130" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="53" width="67" height="30" uuid="f981919b-8b6b-44d1-9ec7-d61c0b566bf4"/>
+				<textFieldExpression><![CDATA[$F{lId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="67" y="53" width="61" height="30" uuid="bbde6179-b131-49ad-9221-4dd32353fe18"/>
+				<textFieldExpression><![CDATA[$F{eId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="128" y="53" width="61" height="30" uuid="21be41f4-887e-4d87-9320-887883f1e66d"/>
+				<textFieldExpression><![CDATA[$F{eName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="189" y="53" width="61" height="30" uuid="3caaee61-4008-428c-8882-03466c8c3254"/>
+				<textFieldExpression><![CDATA[$F{level}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="250" y="53" width="61" height="30" uuid="659e280a-98f8-48e7-9eca-557a75594f40"/>
+				<textFieldExpression><![CDATA[$F{loanAmount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="311" y="53" width="61" height="30" uuid="391b8d1e-8269-4ce0-b754-191e5ddabc26"/>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="372" y="53" width="61" height="30" uuid="f52f2645-2ec6-4624-90f6-61721db407a4"/>
+				<textFieldExpression><![CDATA[$F{due}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="433" y="53" width="61" height="30" uuid="f0bd27dd-83c4-40a1-9d80-0c76252992de"/>
+				<textFieldExpression><![CDATA[$F{interest}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="494" y="53" width="61" height="30" uuid="f8bb1de5-b6f1-4dcf-8607-1bbb01421a35"/>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

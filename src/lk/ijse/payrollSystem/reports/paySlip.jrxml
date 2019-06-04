@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2018-06-08T12:39:07 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="paySlip" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f5de9034-c5f7-49ac-9fad-c9303cd8f6df">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="payrollSystem Adapter "/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[select * from salarydetails]]>
+	</queryString>
+	<field name="sdId" class="java.lang.String"/>
+	<field name="empId" class="java.lang.String"/>
+	<field name="empName" class="java.lang.String"/>
+	<field name="level" class="java.lang.String"/>
+	<field name="basicSalaryAmount" class="java.lang.String"/>
+	<field name="salId" class="java.lang.String"/>
+	<field name="date" class="java.sql.Date"/>
+	<field name="noPay" class="java.math.BigDecimal"/>
+	<field name="loan" class="java.math.BigDecimal"/>
+	<field name="damages" class="java.math.BigDecimal"/>
+	<field name="epf" class="java.math.BigDecimal"/>
+	<field name="grossDeduction" class="java.math.BigDecimal"/>
+	<field name="netSalary" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="129" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="40" width="130" height="20" uuid="86ca7198-0aac-481a-a203-6e39902e59a1"/>
+				<text><![CDATA[Villa Mount Royal ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="60" width="50" height="21" uuid="bb0bf6b7-e8de-4a92-a3b2-a509ed7b176b"/>
+				<text><![CDATA[date]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="425" y="61" width="150" height="18" uuid="b6c18504-5cc2-47cd-95da-4f59154f220d"/>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="9" y="60" width="131" height="20" uuid="7ba0219c-cb9f-4dfc-b4c0-52b04e387f2f"/>
+				<text><![CDATA[No.54/A,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="81" width="121" height="20" uuid="e899ce0e-ca19-4f99-8456-17665d9b79c3"/>
+				<text><![CDATA[Mahagsthota,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="109" width="130" height="20" uuid="fd433d38-ec0c-4d9d-a8e9-dc5b1b15425f"/>
+				<text><![CDATA[NuwaraEliya.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="87" width="40" height="25" uuid="59bdd885-3f1a-43a9-af14-cec10cf89149"/>
+				<text><![CDATA[sdId]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="425" y="90" width="151" height="19" uuid="48168083-973f-4c63-a19e-2221a5670f64"/>
+				<textFieldExpression><![CDATA[$F{sdId}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="180" y="0" width="168" height="30" uuid="a8a88f49-321d-4c42-93d1-83e4813fade5"/>
+				<textElement>
+					<font size="22"/>
+				</textElement>
+				<text><![CDATA[PaySlip
+]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="452" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+			<staticText>
+				<reportElement x="0" y="59" width="60" height="30" uuid="f747cf25-e281-4df9-ada2-005ad3d91cc8"/>
+				<text><![CDATA[empId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="57" width="60" height="20" uuid="57abe8dd-1623-4a52-ab0e-d87b0a4e462e"/>
+				<text><![CDATA[empName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="420" y="55" width="40" height="25" uuid="82f237a8-b28e-424d-ac8d-f33ca5742832"/>
+				<text><![CDATA[level]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="160" width="180" height="30" uuid="67d94aba-de7a-47b6-af4e-251a8ea9c0b0"/>
+				<text><![CDATA[basicSalaryAmount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="204" width="190" height="30" uuid="03a36b70-2f3a-46b9-966d-0e8292c9cbc9"/>
+				<text><![CDATA[salId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="234" width="200" height="30" uuid="4327f8da-3bdf-4058-8b8d-d93ae3ae339e"/>
+				<text><![CDATA[noPay]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="260" width="190" height="30" uuid="df5bf788-7a6e-4bc3-aadd-17cac67a7b00"/>
+				<text><![CDATA[loan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="290" width="190" height="30" uuid="f2a59b89-2dc9-4647-b88e-c6cb8f028a1c"/>
+				<text><![CDATA[damages]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="330" width="190" height="30" uuid="a41870dd-6ac5-4adf-bd3c-ba09a26796f1"/>
+				<text><![CDATA[epf]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="370" width="190" height="30" uuid="a358a9a7-e2b0-470c-9651-a9bf73813c53"/>
+				<text><![CDATA[grossDeduction]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="420" width="180" height="32" uuid="059b8398-b3fb-4853-a528-4217b379f6f6"/>
+				<text><![CDATA[netSalary]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="70" y="60" width="60" height="15" uuid="406ecbbb-cd6b-4305-a4e6-980529a12488"/>
+				<textFieldExpression><![CDATA[$F{empId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="57" width="70" height="15" uuid="ebedbbb9-dae7-4f87-a6c2-14091fee7a65"/>
+				<textFieldExpression><![CDATA[$F{empName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="480" y="54" width="90" height="20" uuid="d0c17206-2903-4f9d-ae44-c0718c23c08f"/>
+				<textFieldExpression><![CDATA[$F{level}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="350" y="165" width="150" height="20" uuid="b8e0aae9-dc9e-4f03-87f3-895531f51592"/>
+				<textFieldExpression><![CDATA[$F{basicSalaryAmount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="350" y="210" width="150" height="18" uuid="8b9933fa-935d-470e-9e36-4cb125633df2"/>
+				<textFieldExpression><![CDATA[$F{salId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="350" y="242" width="151" height="18" uuid="e8d2b64f-52b5-4c7a-9b68-68e14ea6899a"/>
+				<textFieldExpression><![CDATA[$F{noPay}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="350" y="272" width="150" height="18" uuid="c63eebe8-6102-4838-ae23-2a4761605f92"/>
+				<textFieldExpression><![CDATA[$F{loan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="350" y="300" width="150" height="18" uuid="16b81440-097b-4154-8283-6020e8885b6d"/>
+				<textFieldExpression><![CDATA[$F{damages}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="350" y="336" width="100" height="18" uuid="9a7f9ecd-bcaf-47fb-8280-14e31856a34c"/>
+				<textFieldExpression><![CDATA[$F{epf}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="348" y="370" width="160" height="18" uuid="69168e72-ea46-4d67-b152-a5e15c28022b"/>
+				<textFieldExpression><![CDATA[$F{grossDeduction}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="350" y="410" width="160" height="22" uuid="43d5d988-4cfa-4e82-926c-d10d1ccb095a"/>
+				<textFieldExpression><![CDATA[$F{netSalary}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="107" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+			<staticText>
+				<reportElement x="350" y="50" width="175" height="21" uuid="8a25612b-99d1-4fd5-8709-88d182ac8946"/>
+				<text><![CDATA[...................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="86" width="175" height="21" uuid="d7985cab-1bf3-4a5c-8982-d1f51acd9918"/>
+				<text><![CDATA[Accountant]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="36" width="143" height="30" uuid="6f568237-0294-4cd6-8536-2d120b53ccae"/>
+				<text><![CDATA[0330123564]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="70" width="143" height="30" uuid="536a0ed6-270e-4cd0-8364-e035f8410587"/>
+				<text><![CDATA[07732156420]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="87" width="143" height="20" uuid="3101d6f0-5ea0-40e6-9a9e-d99f8f6a646e"/>
+				<text><![CDATA[VillaMount124@gmail.com]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
